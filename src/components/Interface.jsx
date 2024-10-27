@@ -271,14 +271,14 @@ const ProjectsSection = () => {
     <Section>
       <div className="flex w-full h-full gap-8 items-center justify-center">
         <button
-          className="hover:text-indigo-600 transition-colors"
+          className="hover:text-indigo-600 transition-colors text-white"
           onClick={previousProject}
         >
           ← Previous
         </button>
-        <h2 className="text-3xl font-bold uppercase">Projects</h2>
+        <h2 className="text-3xl font-bold uppercase text-white">Projects</h2>
         <button
-          className="hover:text-indigo-600 transition-colors"
+          className="hover:text-indigo-600 transition-colors text-white"
           onClick={nextProject}
         >
           Next →
@@ -334,7 +334,7 @@ const ContactSection = () => {
   return (
     <Section>
       <Toaster />
-      <h2 className="text-3xl font-bold uppercase">Contact me</h2>
+      <h2 className="text-3xl font-bold uppercase text-white">Contact me</h2>
       <div className="shine-border mt-8 p-8 rounded-md bg-white bg-opacity-40 w-96 max-w-full" id="contactSec">
         <form
         >
