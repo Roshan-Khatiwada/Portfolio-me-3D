@@ -64,7 +64,7 @@ const AboutSection = (props) => {
   const { setSection } = props;
   const handleViewCV = () => {
     // Replace 'CV_URL' with the direct URL to your CV file
-    const cvUrl = "/resume.html";
+    const cvUrl = "https://resume-roshan-khatiwada.vercel.app/";
     window.open(cvUrl, "_blank");
   };
   return (
