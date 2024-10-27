@@ -83,7 +83,7 @@ const Projects = ({ command }) => {
          <div id='projects_row'>
           
              <div id='projects_ui'>
-                     <img src='/public/portfolio1.png'/>
+                     <img src='/projects/portfolio1.png'/>
              </div>
             <a href='www.portfolio.com' target="_blank" rel="noopener noreferrer">
              <div id='projects_info'>
