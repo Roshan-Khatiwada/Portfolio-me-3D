@@ -22,7 +22,7 @@ export const projects = [
   },
     {
     title: "MY Portfolio",
-    url: "https://david-mwas.vercel.app/",
+    url: "https://roshankhatiwada.vercel.app/",
     image: "projects/portfolio.png",
     description: "Created a 3D portfolio.",
   },
