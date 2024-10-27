@@ -1,6 +1,6 @@
 ## 👋Hello wrld
 
-## WELCOME TO DAVID-MWAS PORTFOLIO🚀
+## WELCOME TO ROSHAN KHATIWADA PORTFOLIO🚀
 
 ![Alt text](public/projects/portfolio.png)
 
@@ -24,12 +24,5 @@ Vite + React as main JS framework, React three && React three fiber for 3D rende
 
 ## Live site
 
-🏹 https://david-mwas.vercel.app/
+🏹 https://roshankhatiwada.vercel.app/
 
-## Github
-
-🎯 https://github.com/David-mwas/My-3D-Portfolio.git
-
-### Inspiration
-
-This project was inspired by a React three &&React three fiber tuitor @WAWA SESEI🐬
