@@ -19,7 +19,6 @@
   display: none;
 }
 #button{
-z-index: 99999;
 background-color: #a755f6;
 padding: 2px;
 bottom: 2px;
