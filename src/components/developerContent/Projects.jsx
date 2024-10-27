@@ -85,7 +85,7 @@ const Projects = ({ command }) => {
              <div id='projects_ui'>
                      <img src='/projects/portfolio1.png'/>
              </div>
-            <a href='www.portfolio.com' target="_blank" rel="noopener noreferrer">
+            <a href='https://roshankhatiwada.vercel.app/' target="_blank" rel="noopener noreferrer">
              <div id='projects_info'>
                
                     <div id='project_name'>
