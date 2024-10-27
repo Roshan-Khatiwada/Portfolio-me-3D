@@ -39,7 +39,7 @@ const Projects = ({ command }) => {
         <div id='projects_row'>
           
              <div id='projects_ui'>
-                     <img src='/public/projects/chatbox.png'/>
+                     <img src='/projects/chatbox.png'/>
              </div>
               <a href='#This application is not lived. So contact me for this project.com' /*target="_blank" rel="noopener noreferrer"*/>
              <div id='projects_info'>
@@ -60,7 +60,7 @@ const Projects = ({ command }) => {
         <div id='projects_row'>
           
              <div id='projects_ui'>
-                     <img src='/public/projects/quiz.png'/>
+                     <img src='/projects/quiz.png'/>
              </div>
              <a href='#This application is not lived. So contact me for this project.com' /*target="_blank" rel="noopener noreferrer"*/>
              <div id='projects_info'>
@@ -83,7 +83,7 @@ const Projects = ({ command }) => {
          <div id='projects_row'>
           
              <div id='projects_ui'>
-                     <img src='/public/projects/portfolio1.png'/>
+                     <img src='/public/portfolio1.png'/>
              </div>
             <a href='www.portfolio.com' target="_blank" rel="noopener noreferrer">
              <div id='projects_info'>
@@ -106,7 +106,7 @@ const Projects = ({ command }) => {
         <div id='projects_row'>
           
              <div id='projects_ui'>
-                     <img src='/public/projects/wordscramble.png'/>
+                     <img src='/projects/wordscramble.png'/>
              </div>
              <a href='https://react-word-scramble-game.vercel.app/' target="_blank" rel="noopener noreferrer">
              <div id='projects_info'>
@@ -128,7 +128,7 @@ const Projects = ({ command }) => {
         <div id='projects_row'>
           
              <div id='projects_ui'>
-                     <img src='/public/projects/voicetonote.png'/>
+                     <img src='/projects/voicetonote.png'/>
              </div>
                 <a href='https://voice-to-text-note.vercel.app/' target="_blank" rel="noopener noreferrer">
              <div id='projects_info'>
@@ -150,7 +150,7 @@ const Projects = ({ command }) => {
         <div id='projects_row'>
           
              <div id='projects_ui'>
-                     <img src='/public/projects/youtube.png'/>
+                     <img src='/projects/youtube.png'/>
              </div>
              <a href='https://youtube-clone-rouge-seven.vercel.app/' target="_blank" rel="noopener noreferrer">
              <div id='projects_info'>
@@ -173,7 +173,7 @@ const Projects = ({ command }) => {
         <div id='projects_row'>
           
              <div id='projects_ui'>
-                     <img src='/public/projects/baghchaal.png'/>
+                     <img src='/projects/baghchaal.png'/>
              </div>
             <a href='https://bagh-chaal-six.vercel.app/' target="_blank" rel="noopener noreferrer">
              <div id='projects_info'>
