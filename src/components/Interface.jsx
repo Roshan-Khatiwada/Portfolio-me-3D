@@ -195,7 +195,7 @@ const SkillsSection = () => {
       <motion.div className="w-full flex flex-col md:flex-row gap-8" whileInView={"visible"}>
         {/* Left Section: Skills Text */}
 <div className="w-full md:w-1/2 px-4 " id="div1">
-  <h2 className="text-[40px] font-bold uppercase">Skills</h2>
+  <h2 className="text-[40px] font-bold uppercase text-white">Skills</h2>
   <motion.p  className="text-lg text-gray-100 mt-4 md:w-[90%] bg-[rgba(0,28,48,.4)] rounded-lg px-4  py-4 max-h-[300px] overflow-y-auto custom-scrollbar"
        initial={{
           opacity: 0,
