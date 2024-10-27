@@ -79,7 +79,7 @@ const handleCommand = (e) => {
     const command = e.target.value.trim()
 
     // Clear command
-    if (command === "clear") {
+    if (command.toLowerCase() === "clear") {
       setCommands([]); // Clear all commands
       setGreetVisible(false);
       e.target.value = "";
@@ -87,7 +87,7 @@ const handleCommand = (e) => {
     }
 
     // Exit command
-    if (command === "exit") {
+    if (command.toLowerCase() === "exit") {
       setDevOpened(false); // Close the command prompt
       setCommands([]); // Reset commands when exiting
       setGreetVisible(true);
