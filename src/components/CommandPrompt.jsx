@@ -202,7 +202,7 @@ const handleCommand = (e) => {
                                portfolio
                               </div>
                               <div id="div3">
-                                 <FaBriefcase style={{ marginRight: '5px' }} /> 
+                                 <FaSmile style={{ marginRight: '5px' }} /> 
                                   greet
                               </div>
                             </div>
