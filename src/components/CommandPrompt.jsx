@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import UTurnArrow from "./icons/UTurnArrow";
 import { useRef } from "react";
-import { FaUser, FaBriefcase,FaInfoCircle } from 'react-icons/fa';
+import { FaUser, FaBriefcase,FaInfoCircle,FaSmile} from 'react-icons/fa';
 import About from "./developerContent/About";
 import Help from "./developerContent/Help";
 import Contact from "./developerContent/Contact";
