@@ -36,7 +36,7 @@ const About = ({ command }) => {
        <div id='lower_about'>
            <div id='about_first_div'>
                  <div id='profile_pic' className='shine-border'>
-                    <img src='/public/projects/me.png'/>
+                    <img src='/projects/me.png'/>
                  </div>
                   <div id='name_and_post'>
                         <div id='about_name'>
