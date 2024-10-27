@@ -95,27 +95,27 @@ export const SocialMedia = () => {
     <Dock>
       <DockIcon>
         <a href="https://github.com/Roshan-Khatiwada" target="_blank" rel="noopener noreferrer">
-          <FaGithub size={25} />
+          <FaGithub size={25} color="white"/>
         </a>
       </DockIcon>
       <DockIcon>
         <a href="https://www.linkedin.com/in/roshan-khatiwada-144a77307/" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin size={25} />
+          <FaLinkedin size={25} color="white"/>
         </a>
       </DockIcon>
       <DockIcon>
         <a href="https://www.upwork.com/freelancers/~01e545a3f9003814d7" target="_blank" rel="noopener noreferrer">
-          <FaUpwork size={25} />
+          <FaUpwork size={25} color="white"/>
         </a>
       </DockIcon>
       <DockIcon>
         <a href="https://www.facebook.com/profile.php?id=100085853364426" target="_blank" rel="noopener noreferrer">
-          <FaFacebook size={25} />
+          <FaFacebook size={25} color="white"/>
         </a>
       </DockIcon>
       <DockIcon>
         <a href="https://www.instagram.com/riteshrooson/" target="_blank" rel="noopener noreferrer">
-          <FaInstagram size={25} />
+          <FaInstagram size={25} color="white"/>
         </a>
       </DockIcon>
     </Dock>
