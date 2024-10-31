@@ -60,7 +60,7 @@ const About = ({ command }) => {
                 <FaLinkedin size={30} />
                 <p>@linkedin</p>
             </a>
-            <a href="https://www.upwork.com/freelancers/~01e545a3f9003814d7" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.upwork.com/freelancers/~016ecd378bff17945a" target="_blank" rel="noopener noreferrer">
                 <FaUpwork size={30} />
                 <p>@upwork</p>
             </a>
