@@ -56,7 +56,7 @@ const About = ({ command }) => {
                 <FaGithub size={30} />
                  <p>@github</p> 
             </a>
-            <a href="https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/roshan-khatiwada-144a77307/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin size={30} />
                 <p>@linkedin</p>
             </a>
