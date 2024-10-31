@@ -53,7 +53,7 @@ const Contact = ({ command }) => {
                 <FaLinkedin size={40} color='#be95be'/>
                 <p>@linkedin/roshankhatiwada</p>
             </a>
-            <a href="https://www.upwork.com/freelancers/~01e545a3f9003814d7" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.upwork.com/freelancers/~016ecd378bff17945a" target="_blank" rel="noopener noreferrer">
                 <FaUpwork size={40} color='#9c96de'/>
                 <p>@upwork/roshankhatiwada</p>
             </a>
