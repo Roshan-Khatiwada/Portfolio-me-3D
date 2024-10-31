@@ -104,7 +104,7 @@ export const SocialMedia = () => {
         </a>
       </DockIcon>
       <DockIcon>
-        <a href="https://www.upwork.com/freelancers/~01e545a3f9003814d7" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.upwork.com/freelancers/~016ecd378bff17945a" target="_blank" rel="noopener noreferrer">
           <FaUpwork size={25} color="white"/>
         </a>
       </DockIcon>
