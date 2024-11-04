@@ -114,7 +114,7 @@ export const SocialMedia = () => {
         </a>
       </DockIcon>
       <DockIcon>
-        <a href="https://www.instagram.com/riteshrooson/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/roshan2005.8.19/" target="_blank" rel="noopener noreferrer">
           <FaInstagram size={25} color="white"/>
         </a>
       </DockIcon>
