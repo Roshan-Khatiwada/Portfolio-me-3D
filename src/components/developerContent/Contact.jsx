@@ -61,7 +61,7 @@ const Contact = ({ command }) => {
                 <FaFacebook size={40} color='#4284fb'/>
                <p>@facebook/roshankhatiwada</p>
             </a>
-            <a href="https://www.instagram.com/riteshrooson/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/roshan2005.8.19/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram size={40} color='#f64d58'/>
                 <p>@instagram/roshankhatiwada</p>
             </a>
