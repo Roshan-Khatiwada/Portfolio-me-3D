@@ -68,7 +68,7 @@ const About = ({ command }) => {
                 <FaFacebook size={30} />
                <p>@facebook</p>
             </a>
-            <a href="https://www.instagram.com/riteshrooson/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/roshan2005.8.19/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram size={30} />
                 <p>@instagram</p>
             </a>
