@@ -6,7 +6,7 @@ import { Cloud, fetchSimpleIcons, renderSimpleIcon } from "react-icon-cloud";
 
 // Define the array of icon slugs
 const slugs = [
-   "windows", "android", "linkedin","bootstrap", "c", "cplusplus", "csharp", 
+  "android","bootstrap", "c", "cplusplus", "csharp", 
   "css3", "discord", "dotnet", "figma", "firebase", "git", 
   "github","gmail", "html5", "instagram", "java", 
   "javascript", "kotlin", "linkedin", "linux", "mongodb", "nextdotjs", 
