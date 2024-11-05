@@ -6,7 +6,7 @@ import { Cloud, fetchSimpleIcons, renderSimpleIcon } from "react-icon-cloud";
 
 // Define the array of icon slugs
 const slugs = [
-  "android", "angular", "bootstrap", "c", "cplusplus", "csharp", 
+   "windows", "android", "linkedin","bootstrap", "c", "cplusplus", "csharp", 
   "css3", "discord", "dotnet", "figma", "firebase", "git", 
   "github","gmail", "html5", "instagram", "java", 
   "javascript", "kotlin", "linkedin", "linux", "mongodb", "nextdotjs", 
@@ -17,7 +17,6 @@ const slugs = [
 // Map icon slugs to colors
 const colorMap = {
   android: '#3DDC84',
-  angular: '#DD0031',
   bootstrap: '#7952B3',
   c: '#A8B9CC',
   cplusplus: '#00599C',
