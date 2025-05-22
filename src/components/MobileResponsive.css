@@ -1,0 +1,209 @@
+@media (max-width: 768px) {
+  #div1 p{
+    display: none;
+  }
+  #iconcloud{
+  
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 100px;
+    
+  }
+}
+@media (max-width: 500px) {
+  #iconcloud{
+  background-color: white;
+    
+  }
+}
+
+#hello {
+  overflow: hidden; /* Ensures that the text stays within the container */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  border-right: 4px solid rgba(255, 255, 255, 0.75); /* Creates the blinking cursor effect */
+  width: fit-content; /* Adjusts the width to the content */
+  animation: typing 4s steps(40, end), blink 0.75s step-end infinite; /* Typing and blinking cursor animations */
+}
+
+
+@media (max-width: 410px) {
+  #buttonAboutSec{
+     width: 130px;
+     height: 50px;
+     font-size: 15px;
+     padding: 2px;
+  }
+
+}
+
+@media (max-width: 357px) {
+  #buttonAboutSec{
+     width: 120px;
+     height: 40px;
+     font-size: 13px;
+     padding: 1px;
+  }
+
+}
+@media (max-width: 340px) {
+  #buttonAboutSec{
+     width: 90px;
+     height: 40px;
+     font-size: 13px;
+     padding: 1px;
+  }
+
+}
+@media (max-width: 600px) {
+  #contactSec{
+    width: 100%;
+  }
+   #contactSec form label{
+    margin: 5px 0 5px 0;
+  }
+  #contactSec button{
+    margin: 20px 0 0 0;
+  }
+}
+@media (max-width: 400px) {
+  #contactSec{
+    padding: 10px;
+  
+  }
+  #contactSec form label{
+    margin: 5px 0 5px 0;
+  }
+  #contactSec button{
+    height: 50px;
+  
+  }
+}
+@media (max-width: 238px) {
+
+  #contactSec button span {
+    display: none; /* Hide only the text */
+  }
+}
+
+@media (min-width: 1000px) {
+  #contactSec{
+   width: 40%;
+  }
+}
+
+#contactSec{
+  margin-bottom: 3rem;
+}
+
+
+
+
+/* for footer */
+f/* Footer styling */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.footer div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.footer .contact-info {
+  flex-direction: column;
+}
+
+.footer .social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.footer a {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #ff00ff; /* Hover color */
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .footer div {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.shine-border {
+ 
+  /* Conic gradient background */
+  --border-angle: 0turn; /* For animation */
+  --main-bg: conic-gradient(
+    from var(--border-angle),
+    #d8d7ec,
+    #d8d7ec 5%,
+    #d8d7ec 60%,
+    #d8d7ec 95%
+  );
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #a755f7, #884bc5 99%, transparent);
+  
+  background: 
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box,
+    var(--main-bg) border-box;
+  
+  border: solid 3px transparent;
+  
+  animation: bg-spin 1.5s linear infinite;
+}
+
+/* Keyframe animation for the border spin */
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+.shine-border:hover {
+  animation-play-state: paused; /* Pause the animation on hover */
+}
+
+/* CSS property for --border-angle to make it animatable */
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+
+
+
+/* social media icons  */
+.socialmediaicons{
+  height: auto;
+  width: auto;
+  position: absolute;
+  left: 0;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+
+
+}

@@ -1,0 +1,15 @@
+/* DynamicIconCloud.css */
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg); /* Front spinning */
+  }
+}
+
+.cloud {
+  animation: spin 10s linear infinite; /* Apply animation directly to the Cloud */
+  transform-origin: center; /* Optional: adjust as necessary */
+}

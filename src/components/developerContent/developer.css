@@ -1,0 +1,369 @@
+
+
+#main{
+    display: flex;
+    flex-direction: column;
+}
+#main #upper{
+    display: flex;
+    flex-direction: column;
+}
+#main #upper #div_commands{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size:17px ;
+   padding: 10px 10px 0px 10px;
+
+}
+#main #upper #div_commands div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30px;
+  width: auto;
+  border-radius: 20px;
+ 
+}
+#main #upper #div1{
+  background-color: blue;
+  z-index: 2;
+   padding: 15px;
+}
+#main #upper #div2{
+  background-color: rgb(37, 207, 105);
+  padding-left: 30px;
+  padding-right: 20px;
+  margin-left: -20px;
+  z-index: 1
+}
+#main #upper #div3{
+  background-color: rgb(244, 146, 152);
+  padding-left: 30px;
+  padding-right: 20px;
+  margin-left: -20px;
+  z-index: 0
+}
+#main #upper  #command_entered{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   font-size: 15px;
+   padding-left: 20px;
+   padding-right: 20px;
+   gap:5px;
+}
+
+
+
+/* 
+this is the css of help section */
+#main #lower{
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+#main #lower #div_lower{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    height: 20px;
+}
+#main #lower #div_lower #command_text{
+    width: 70px;
+    color: rgb(200, 162, 26);
+}
+
+
+
+
+
+/* this is css of about section */
+#main #lower_about {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 10px 20px;
+
+}
+#main #lower_about #about_first_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+#main #lower_about #about_first_div #profile_pic{
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgb(243, 196, 196);
+}
+#main #lower_about #about_first_div #profile_pic img{
+   height: 120px;
+   width: 120px;
+}
+#main #lower_about #about_first_div #about_name{
+    font-size: 27px;
+    height: 27px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#main #lower_about #about_first_div #about_post{
+    font-size: 15px;
+}
+
+
+/* shine border animation */
+
+@-webkit-keyframes pulse {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    to {
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    to {
+        background-position: 0% 0%;
+    }
+}
+
+
+
+
+#main #lower_about #about_first_div .shine-border {
+ 
+
+  /* Conic gradient background */
+  --border-angle: 0turn; /* For animation */
+  --main-bg: conic-gradient(
+    from var(--border-angle),
+    #d8d7ec,
+    #d8d7ec 5%,
+    #d8d7ec 60%,
+    #d8d7ec 95%
+  ); 
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%,#5563ff, #496aff 99%, transparent);
+  
+  background: 
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box,
+    var(--main-bg) border-box;
+  
+  border: solid 2px transparent;
+  
+  animation: bg-spin 1.5s linear infinite;
+}
+
+/* Keyframe animation for the border spin */
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+#main #lower_about #about_first_div .shine-border .shine-border:hover {
+  animation-play-state: paused; /* Pause the animation on hover */
+}
+
+/* CSS property for --border-angle to make it animatable */
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+
+
+@media (max-width: 431px) {
+#main #lower_about #about_first_div #about_name{
+    font-size: 21px;
+    height: 21px;
+}
+#main #lower_about #about_first_div #about_post{
+    font-size: 14px;
+}
+#main #lower_about #about_first_div #profile_pic img{
+   height: 90px;
+   width: 90px;
+}
+#main #lower_about {
+    padding: 10px 0px 10px 20px;
+
+}
+}
+@media (max-width: 325px) {
+   #main #lower_about #about_first_div #about_name #logo1 {
+  display: none;
+   }
+}
+
+#main #lower_about #about_second_div{
+    font-size: 18px;
+    line-height: 1.2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#main #lower_about #about_third_div{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-right: 20px;
+   font-size: 15px;
+}
+#main #lower_about #about_third_div a{
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 5px;
+
+}
+#main #lower_about #about_third_div a p{
+color: #3748ff;
+
+}
+
+@media (max-width: 600px) {
+#main #lower_about #about_third_div a{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0px;
+}
+}
+@media (max-width: 370px) {
+#main #lower_about #about_third_div a p{
+font-size: 12px;
+}
+}
+
+
+
+/* this is the css of contact section */
+#main #contact_lower{
+    padding: 15px 10px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#main #contact_lower a{
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+}
+#main #contact_lower a p{
+    font-size: 18px;
+    color: rgb(55, 55, 255);
+}
+
+
+@media (max-width: 393px) {
+   #main #contact_lower a{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+}
+
+
+
+/* 
+this is the css of invalid section */
+
+#main #invalid_lower{
+    padding: 0px 20px 20px 20px;
+    line-height: 1.5;
+}
+#main #invalid_lower #invalid_command{
+    font-size:16px ;
+    color: rgb(255, 66, 66);
+}
+#main #invalid_lower #guide{
+    font-size:16px ;
+}
+
+
+
+
+
+
+/* this is teh css of projects section */
+#main #projects_lower{
+    padding: 10px 0px 20px 20px ;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#main #projects_lower #projects_row{
+}
+#main #projects_lower #projects_row 
+{
+display: flex;
+flex-direction: row;
+gap: 10px;
+}
+#main #projects_lower #projects_row #projects_ui{
+    border: 3px solid #6dbfb8;
+    height:auto;
+    width: auto;
+    top: 0;
+    bottom: 0;
+    display: flex;
+}
+#main #projects_lower #projects_row #projects_ui img{
+    top: 0;
+    bottom: 0;
+    
+}
+#main #projects_lower #projects_row #projects_info #links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#main #projects_lower #projects_row #projects_info #project_name{
+    font-size: 30px;
+    color: #6dbfb8;
+    margin-top: -5px;
+}
+#main #projects_lower #projects_row #projects_info #project_details{
+    font-size: 15px;
+    line-height: 1.4;
+}
+#main #projects_lower #projects_row #projects_info #language_used{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+@media (max-width: 500px) {
+#main #projects_lower #projects_row{
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+#main #projects_lower #projects_row #projects_ui{
+  height: auto;
+  width: fit-content;
+  margin-bottom: 5px;
+}
+}

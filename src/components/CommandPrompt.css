@@ -1,0 +1,309 @@
+#button #dev_mode{
+  margin-top: 2px;
+  padding: 3px;
+  color:#a755f6;
+  border-radius: 5px;
+  font-size: 13px;
+  font-family:'Fira Code', monospace;
+}
+#button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 1vw;
+  bottom: 0;
+}
+
+@media (max-width: 767px) {
+#button #dev_mode{
+  display: none;
+}
+#button{
+background-color: #a755f6;
+padding: 2px;
+bottom: 2px;
+}
+}
+
+
+#button .shine-border1 {
+ 
+
+  /* Conic gradient background */
+  --border-angle: 0turn; /* For animation */
+  --main-bg: conic-gradient(
+    from var(--border-angle),
+    #ffffff,
+    #ffffff 5%,
+    #ffffff 60%,
+    #ffffff 95%
+  );
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #ffffff, #c354ff 99%, transparent);
+  
+  background: 
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box,
+    var(--main-bg) border-box;
+  
+  border: solid 2px transparent;
+  
+  animation: bg-spin 1s linear infinite;
+}
+
+/* Keyframe animation for the border spin */
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+.shine-border1:hover {
+  animation-play-state: paused; /* Pause the animation on hover */
+}
+
+/* CSS property for --border-angle to make it animatable */
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+
+
+
+
+
+
+#commandPrompt{
+  height: 100%;
+  width: 100%;
+  background-image: url('/projects/background_prompt.jpg'); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#center_div {
+  height: 35vw; 
+  width: 60vw;   
+  background-color: rgba(0, 0, 0, 0.576);
+  margin: auto;
+}
+
+#terminal_head{
+  height: 8%;
+  background-color: rgb(36, 108, 134);
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-between;
+  border-radius: 5px;
+  
+}
+#three_dots{
+height: auto;
+width: auto;
+display: flex;
+flex-direction: row;
+gap: 10px;
+
+}
+
+#three_dots div{
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#dot1{
+  background-color: red;
+ }
+ #dot2{
+  background-color: orange;
+ }
+ #dot3{
+  background-color: rgb(82, 252, 82);
+ }
+
+ #name{
+  font-size: 15px;
+ }
+
+#terminal_body {
+  height: 92%;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+}
+#terminal_body::-webkit-scrollbar {
+  display: none;
+}
+#contents_present{
+
+}
+#contents_present #greet #upper{
+  display: flex;
+  flex-direction: row;
+  font-size: 17px;
+  padding: 10px;
+}
+#contents_present #greet #upper div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+  height: 30px;
+  width: auto;
+  border-radius: 20px;
+}
+#contents_present #greet #upper #div1{
+  background-color: blue;
+  z-index: 2;
+}
+#contents_present #greet #upper #div2{
+  background-color: rgb(37, 207, 105);
+  padding-left: 30px;
+  margin-left: -20px;
+  z-index: 1
+}
+#contents_present #greet #upper #div3{
+  background-color: rgb(244, 146, 152);
+  padding-left: 30px;
+  margin-left: -20px;
+  z-index: 0
+}
+#contents_present #greet #lower{
+ padding-left: 20px;
+ padding-bottom: 20px;
+}
+
+#contents_present #greet p{
+  font-size: 40px;
+  padding-left: -9px;
+  padding-top: 5px;
+}
+
+#input_command{
+  height: auto ;
+  padding: 10px;
+}
+
+#upperPart{
+  display: flex;
+  flex-direction: row;
+
+}
+
+#upperPart div{
+  height: 30px;
+  width: auto;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+#upperPart #div1{
+  background-color: blue;
+  border-radius: 20px;
+  z-index: 2;
+}
+#upperPart #div2{
+  background-color: rgb(37, 207, 105);
+  border-radius: 20px;
+  padding-left: 40px;
+  margin-left: -30px;
+  z-index: 1;
+}
+#lowerPart{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding-left: 10px;
+}
+
+#lowerPart input{
+ border: none;
+ outline: none;
+  font-size: 15px;
+  background: transparent;
+  width: 98%;
+}
+#lowerPart #arrow{
+  display: flex;
+  align-items: center;
+ 
+
+}
+#mobile_message{
+  display: none;
+  top: 10px;
+  font-size: 18px;
+  background-color: #be8618;
+  padding: 10px;
+  border-radius: 15px;
+}
+#mobile_message p{
+  font-size: 14px;
+  line-height: 1.2;
+  padding-left: 25px;
+  height: auto;
+}
+#mobile_message h6{
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+@media (max-width: 1100px) {
+#center_div {
+height: 445px;   
+  width: 70vw;   
+  
+}
+}
+@media (max-width: 1020px) {
+#center_div {
+ height: 445px;    
+  width: 100%;   
+  
+}
+}
+@media (max-width: 800px) {
+#center_div {
+height: 445px;   
+  
+}
+#mobile_message{
+  display: block;
+}
+}
+@media (max-width: 700px) {
+#center_div {
+ height: 445px;     
+  
+}
+#terminal_head{
+  height: 8%;
+}
+#terminal_body{
+  height: 92%;
+}
+}
+@media (max-width: 500px) {
+#center_div {
+  height: 445px;   
+  
+}
+#terminal_head{
+  height: 35px;
+}
+#terminal_body{
+  height: 410px;
+}
+}
