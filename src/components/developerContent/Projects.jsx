@@ -5,6 +5,7 @@ import UTurnArrow from "/src/components/icons/UTurnArrow";
 import { FaUser, FaInfoCircle, FaBriefcase, FaTools, FaProjectDiagram, FaEnvelope, FaExclamationTriangle, FaHandPeace, FaQuestionCircle } from 'react-icons/fa';
 import { FaReact, FaCube, FaNodeJs, FaCode, FaGithub, FaCss3,FaJava,FaHtml5,FaFileCode} from 'react-icons/fa';
 import { SiTailwindcss } from 'react-icons/si';
+import { SiJquery } from "react-icons/si";
 import { DiCode } from 'react-icons/di';
 const Projects = ({ command }) => {
   return (
@@ -215,6 +216,29 @@ const Projects = ({ command }) => {
              </div>
               </a>
         </div>
+        <div id='projects_row'>
+          
+          <div id='projects_ui'>
+                  <img src='/projects/typemore.png'/>
+          </div>
+           <a href='https://type-more.vercel.app' target="_blank" rel="noopener noreferrer">
+          <div id='projects_info'>
+                 <div id='project_name'>
+                     TypeMore
+                 </div>
+                  <div id='project_details'>
+                    It is an advanced typing web app to test your english typing speed.
+                 </div>
+                  <div id='language_used'>
+                  <FaHtml5 size={25} color='#b3be62'/>
+                  <FaCss3 size={25} color='#75ba75'/>
+                  <FaJs size={25} color='#75ba75'/>
+                  <SiJquery size={25} color="#0769ad" />
+                  
+                 </div>
+          </div>
+         </a>
+     </div>
       </div>
     </div>
   );

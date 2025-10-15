@@ -27,10 +27,10 @@ export const projects = [
     description: "Created a 3D portfolio.",
   },
   {
-    title: "Word Scrammble",
-    url: "https://react-word-scramble-game.vercel.app/",
-    image: "projects/word-scramble.png",
-    description: "Word scramble react game.",
+    title: "TypeMore",
+    url: "https://type-more.vercel.app/",
+    image: "projects/typemoreproject.png",
+    description: "Advance typing test app.",
   },
   {
     title: "Voice to Note",
