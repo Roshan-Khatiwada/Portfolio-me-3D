@@ -1,15 +1,66 @@
 /* DynamicIconCloud.css */
 
-@keyframes spin {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg); /* Front spinning */
-  }
-}
+
 
 .cloud {
   animation: spin 10s linear infinite; /* Apply animation directly to the Cloud */
   transform-origin: center; /* Optional: adjust as necessary */
+}
+
+/* Force custom colors on icon cloud icons */
+.cloud svg {
+  color: inherit !important;
+  fill: inherit !important;
+}
+
+.cloud a svg {
+  color: inherit !important;
+  fill: inherit !important;
+}
+
+.cloud img {
+  filter: none !important;
+}
+
+/* Ensure hover effects work with custom colors */
+.cloud a:hover svg {
+  color: inherit !important;
+  fill: inherit !important;
+}
+
+/* Enhanced tooltip styling */
+.cloud a {
+  position: relative;
+  cursor: pointer;
+}
+
+.cloud a[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 1000;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cloud a[title]:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  pointer-events: none;
 }
