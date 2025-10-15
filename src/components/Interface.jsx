@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import toast, { Toaster } from "react-hot-toast";
 import { FaEye } from "react-icons/fa";
@@ -13,6 +13,7 @@ import { BsDisplay } from "react-icons/bs";
 import { FaPaperPlane } from 'react-icons/fa'; 
 import CoolMode from "./CoolMode";
 import { SocialMedia } from './SocialMedia';
+
 const Section = (props) => {
   const { children, mobileTop } = props;
 
@@ -41,23 +42,44 @@ const Section = (props) => {
   );
 };
 
-export const Interface = (props) => {
-  const { setSection } = props;
-  return (
-    <CoolMode>
-    
+export const Interface = ({ setSection }) => {
+  const [showCoolMode, setShowCoolMode] = useState(false);
+
+  useEffect(() => {
+    const handleFirstMouseDown = () => {
+      // Enable CoolMode only when a mouse click is detected
+      setShowCoolMode(true);
+      window.removeEventListener("mousedown", handleFirstMouseDown);
+    };
+
+    // Detect if it's a touch device
+    const isTouchDevice =
+      "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+    if (!isTouchDevice) {
+      // Only listen for mouse clicks on non-touch devices
+      window.addEventListener("mousedown", handleFirstMouseDown);
+    }
+
+    return () => {
+      window.removeEventListener("mousedown", handleFirstMouseDown);
+    };
+  }, []);
+
+  const content = (
     <div className="flex flex-col items-center w-screen">
-    <div className="socialmediaicons">
-    <SocialMedia></SocialMedia>
-     </div>
-     <br></br>
+      <div className="socialmediaicons">
+        <SocialMedia />
+      </div>
+      <br />
       <AboutSection setSection={setSection} />
       <SkillsSection />
       <ProjectsSection />
       <ContactSection />
     </div>
-    </CoolMode>
   );
+
+  return showCoolMode ? <CoolMode>{content}</CoolMode> : content;
 };
 
 const AboutSection = (props) => {
