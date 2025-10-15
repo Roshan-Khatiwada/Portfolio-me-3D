@@ -54,9 +54,26 @@ export const Interface = (props) => {
     return false;
   });
 
+  // helper to ignore events that originate from interactive controls (buttons, links, inputs, etc.)
+  const isInteractiveTarget = (target) => {
+    try {
+      return !!(target && target.closest && target.closest("button, a, input, textarea, select, label"));
+    } catch {
+      return false;
+    }
+  };
+
   const handlePointerDown = (e) => {
+    // ignore interactions that originate from form controls or links to avoid accidental remounts/submits
+    if (isInteractiveTarget(e.target)) return;
+
     // React's PointerEvent provides pointerType ('mouse' | 'touch' | 'pen')
-    const pointerType = e.pointerType;
+    // Add small fallback checks in case pointerType is not available from the event
+    const pointerType =
+      e.pointerType ||
+      (e.nativeEvent && e.nativeEvent.pointerType) ||
+      (e.type === "mousedown" ? "mouse" : e.type === "touchstart" ? "touch" : undefined);
+
     if (pointerType === "mouse" && !enableCoolMode) {
       // only update when value actually changes to avoid unnecessary remounts
       setEnableCoolMode(true);
@@ -65,20 +82,10 @@ export const Interface = (props) => {
     }
   };
 
-  // Fallbacks for environments where pointer events might not be available
-  const handleMouseDown = () => {
-    if (!enableCoolMode) setEnableCoolMode(true);
-  };
-  const handleTouchStart = () => {
-    if (enableCoolMode) setEnableCoolMode(false);
-  };
-
   const content = (
     <div
       className="flex flex-col items-center w-screen"
       onPointerDown={handlePointerDown}
-      onMouseDown={handleMouseDown}
-      onTouchStart={handleTouchStart}
     >
       <div className="socialmediaicons">
         <SocialMedia />
