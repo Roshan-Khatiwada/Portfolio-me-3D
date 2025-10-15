@@ -99,9 +99,9 @@ Visit the live portfolio: [https://roshankhatiwada.vercel.app/](https://roshankh
 
 ## 📧 Contact
 
-- **Email**: [riteshrooson@gmail.com]
-- **LinkedIn**: [https://www.linkedin.com/in/roshan-khatiwada-144a77307/]
-- **GitHub**: [https://github.com/Roshan-Khatiwada]
+- **Email**: riteshrooson@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/roshan-khatiwada-144a77307/
+- **GitHub**: https://github.com/Roshan-Khatiwada
 
 ## 📄 License
 
