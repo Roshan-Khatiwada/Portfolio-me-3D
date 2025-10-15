@@ -125,7 +125,7 @@ const AboutSection = (props) => {
         </p>
       </h4>
      <motion.p
-      className="text-lg text-gray-100 mt-4 md:w-[44%] bg-[rgba(0,28,48,.4)] rounded-lg py-4 max-h-[370px] overflow-y-auto"
+      className="text-lg text-gray-100 mt-4 md:w-[44%] bg-[rgba(0,28,48,.4)] rounded-lg py-4 max-h-[370px] overflow-y-auto custom-scrollbar px-4"
       initial={{
         opacity: 0,
         y: 25,
@@ -138,42 +138,14 @@ const AboutSection = (props) => {
         duration: 1,
         delay: 1.5,
       }}
-      style={{
-        scrollbarWidth: 'thin', // Firefox
-      }}
     >
-      <div
-        style={{
-          height: '100%', // Ensure the div takes the full height
-          overflowY: 'auto', // Enable vertical scrolling
-          scrollbarWidth: 'thin', // Firefox
-        }}
-        className="custom-scrollbar"
-      >
-        <TypingText text="  I am a Full Stack Developer from Nepal, passionate 
-        about turning ideas into dynamic websites and applications. With expertise 
-        in both front-end and back-end technologies, I craft seamless user experiences 
-        and efficient systems. I thrive on continuous learning and embrace new challenges
-         in the ever-evolving tech landscape. Let's connect and collaborate to create something 
-         extraordinary together!
-         "/>
-
-      </div>
-
-      <style jsx>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 8px; /* Width of the scrollbar */
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #d1d5db; /* Tailwind's gray-300 */
-          border-radius: 10px; /* Round corners */
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background-color: #1f2937; /* Tailwind's gray-800 */
-        }
-      `}</style>
+      <TypingText text="  I am a Full Stack Developer from Nepal, passionate 
+      about turning ideas into dynamic websites and applications. With expertise 
+      in both front-end and back-end technologies, I craft seamless user experiences 
+      and efficient systems. I thrive on continuous learning and embrace new challenges
+       in the ever-evolving tech landscape. Let's connect and collaborate to create something 
+       extraordinary together!
+       "/>
     </motion.p>
 
 
@@ -251,39 +223,15 @@ const SkillsSection = () => {
           delay: 1.5,
         }}
   >
-  <TypingText text="    As a Full Stack Developer, I’m skilled in both front-end and back-end development, 
+  <TypingText text="    As a Full Stack Developer, I'm skilled in both front-end and back-end development, 
   with expertise in JavaScript, React, Node.js, and Android app development using Java and Kotlin. I build 
   dynamic, responsive web and mobile applications, while efficiently managing databases like Firebase and SQL.
    With a strong foundation in HTML, CSS, and modern frameworks like Next.js and Tailwind CSS, I create visually 
    appealing, user-friendly interfaces that deliver seamless experiences. 
 I focus on delivering seamless, high-performance user experiences."> 
- 
+
     </TypingText> 
   </motion.p>
-
-  <style jsx>{`
-    .custom-scrollbar {
-      scrollbar-width: thin; /* Firefox */
-      scrollbar-color: #a5b5c9 transparent; /* Firefox */
-    }
-
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 8px; /* Width of the scrollbar */
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background: transparent; /* Background of the scrollbar track */
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background-color: #a5b5c9; /* Color of the scrollbar thumb */
-      border-radius: 10px; /* Rounded corners of the scrollbar thumb */
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-      background-color: #7b8a9b; /* Darker color on hover */
-    }
-  `}</style>
 </div>
 
         {/* Right Section: Icon Cloud Animation */}
