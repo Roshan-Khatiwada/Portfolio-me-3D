@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import emailjs from "emailjs-com";
 import toast, { Toaster } from "react-hot-toast";
 import { FaEye } from "react-icons/fa";
@@ -13,7 +13,6 @@ import { BsDisplay } from "react-icons/bs";
 import { FaPaperPlane } from 'react-icons/fa'; 
 import CoolMode from "./CoolMode";
 import { SocialMedia } from './SocialMedia';
-
 const Section = (props) => {
   const { children, mobileTop } = props;
 
@@ -42,32 +41,45 @@ const Section = (props) => {
   );
 };
 
-export const Interface = ({ setSection }) => {
-  const [showCoolMode, setShowCoolMode] = useState(false);
-
-  useEffect(() => {
-    const handleFirstMouseDown = () => {
-      // Enable CoolMode only when a mouse click is detected
-      setShowCoolMode(true);
-      window.removeEventListener("mousedown", handleFirstMouseDown);
-    };
-
-    // Detect if it's a touch device
-    const isTouchDevice =
-      "ontouchstart" in window || navigator.maxTouchPoints > 0;
-
-    if (!isTouchDevice) {
-      // Only listen for mouse clicks on non-touch devices
-      window.addEventListener("mousedown", handleFirstMouseDown);
+export const Interface = (props) => {
+  const { setSection } = props;
+  // Initialize based on detected pointer capability so the first click doesn't change wrapper
+  const [enableCoolMode, setEnableCoolMode] = useState(() => {
+    if (typeof navigator !== "undefined") {
+      const hasTouchPoints = navigator.maxTouchPoints && navigator.maxTouchPoints > 0;
+      const isTouchCapable = ("ontouchstart" in window) || hasTouchPoints;
+      // enable cool mode for non-touch (usually mouse) devices by default
+      return !isTouchCapable;
     }
+    return false;
+  });
 
-    return () => {
-      window.removeEventListener("mousedown", handleFirstMouseDown);
-    };
-  }, []);
+  const handlePointerDown = (e) => {
+    // React's PointerEvent provides pointerType ('mouse' | 'touch' | 'pen')
+    const pointerType = e.pointerType;
+    if (pointerType === "mouse" && !enableCoolMode) {
+      // only update when value actually changes to avoid unnecessary remounts
+      setEnableCoolMode(true);
+    } else if (pointerType === "touch" && enableCoolMode) {
+      setEnableCoolMode(false);
+    }
+  };
+
+  // Fallbacks for environments where pointer events might not be available
+  const handleMouseDown = () => {
+    if (!enableCoolMode) setEnableCoolMode(true);
+  };
+  const handleTouchStart = () => {
+    if (enableCoolMode) setEnableCoolMode(false);
+  };
 
   const content = (
-    <div className="flex flex-col items-center w-screen">
+    <div
+      className="flex flex-col items-center w-screen"
+      onPointerDown={handlePointerDown}
+      onMouseDown={handleMouseDown}
+      onTouchStart={handleTouchStart}
+    >
       <div className="socialmediaicons">
         <SocialMedia />
       </div>
@@ -79,7 +91,7 @@ export const Interface = ({ setSection }) => {
     </div>
   );
 
-  return showCoolMode ? <CoolMode>{content}</CoolMode> : content;
+  return enableCoolMode ? <CoolMode>{content}</CoolMode> : content;
 };
 
 const AboutSection = (props) => {
@@ -93,7 +105,7 @@ const AboutSection = (props) => {
     <Section mobileTop>
     
 
-      <h4 className="flex flex-col text-xl md:text-2xl  text-gray-500 font-bold leading-snug">
+      <h4 id="helwol" className="flex flex-col text-xl md:text-2xl  text-gray-500 font-bold leading-snug">
         Hello world 👋,
         <p className="flex flex-row py-2">
           <span className="text-2xl md:text-3xl bg-purple-500 rounded-lg rounded-tr-none rounded-br-none text-white  px-2">

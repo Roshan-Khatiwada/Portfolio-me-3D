@@ -9,6 +9,11 @@
     margin-bottom: 100px;
     
   }
+
+#helwol{
+  padding-top:40px;
+}
+
 }
 @media (max-width: 500px) {
   #iconcloud{
@@ -33,7 +38,7 @@
      font-size: 15px;
      padding: 2px;
   }
-
+  
 }
 
 @media (max-width: 357px) {
@@ -207,3 +212,4 @@ f/* Footer styling */
 
 
 }
+
