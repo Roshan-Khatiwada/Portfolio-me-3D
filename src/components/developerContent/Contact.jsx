@@ -57,7 +57,7 @@ const Contact = ({ command }) => {
                 <FaUpwork size={40} color='#9c96de'/>
                 <p>@upwork/roshankhatiwada</p>
             </a>
-            <a href="https://www.facebook.com/profile.php?id=100085853364426" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/roshan.khatiwada.134417" target="_blank" rel="noopener noreferrer">
                 <FaFacebook size={40} color='#4284fb'/>
                <p>@facebook/roshankhatiwada</p>
             </a>
