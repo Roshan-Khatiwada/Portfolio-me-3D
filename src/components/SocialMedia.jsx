@@ -109,7 +109,7 @@ export const SocialMedia = () => {
         </a>
       </DockIcon>
       <DockIcon>
-        <a href="https://www.facebook.com/profile.php?id=100085853364426" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/roshan.khatiwada.134417" target="_blank" rel="noopener noreferrer">
           <FaFacebook size={25} color="white"/>
         </a>
       </DockIcon>
