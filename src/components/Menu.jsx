@@ -1,6 +1,5 @@
 import CoolMode from "./CoolMode";
 import { FaUser, FaLaptopCode, FaProjectDiagram, FaEnvelope } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 export const Menu = (props) => {
   const { onSectionChange, menuOpened, setMenuOpened } = props;
@@ -31,40 +30,40 @@ export const Menu = (props) => {
       </CoolMode>
       <CoolMode>
         <div
-          className={`z-10 fixed top-0 right-0 bottom-0 bg-slate-500 transition-all overflow-y-auto menu-scrollbar flex flex-col
-          ${menuOpened ? " w-full md:w-80" : "w-0"}`}
+          className={`z-10 fixed inset-0 overflow-hidden
+          ${menuOpened ? "pointer-events-auto" : "pointer-events-none"}`}
         >
-          <motion.div className="flex-1 flex items-start justify-center flex-col gap-6 p-8 text-white"
-            key={menuOpened}
-            initial={{ opacity: 0, x: 65 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.1 }}
+          <div
+            className={`absolute top-0 right-0 w-screen h-screen
+            md:top-1/2 md:-translate-y-1/2 md:w-[88vw] md:max-w-xs md:h-[60%]
+            bg-slate-900/45 backdrop-blur-md shadow-2xl
+            md:rounded-l-2xl border border-white/20
+            transition-transform duration-300 ease-out overflow-y-auto menu-scrollbar flex flex-col
+            ${menuOpened ? "translate-x-0 md:mr-2" : "translate-x-full md:mr-0"}`}
           >
+            <div className="h-full w-full flex flex-col items-center justify-center gap-3 p-4 md:p-5 text-white">
             <MenuButton 
               icon={<FaUser />} 
               label="About" 
-              onClick={() => onSectionChange(0)} 
-              menuOpened={menuOpened}
+              onClick={() => onSectionChange(0)}
             />
             <MenuButton 
               icon={<FaLaptopCode />} 
               label="Skills" 
-              onClick={() => onSectionChange(1)} 
-              menuOpened={menuOpened}
+              onClick={() => onSectionChange(1)}
             />
             <MenuButton 
               icon={<FaProjectDiagram />} 
               label="Projects" 
-              onClick={() => onSectionChange(2)} 
-              menuOpened={menuOpened}
+              onClick={() => onSectionChange(2)}
             />
             <MenuButton 
               icon={<FaEnvelope />} 
               label="Contact" 
-              onClick={() => onSectionChange(3)} 
-              menuOpened={menuOpened}
+              onClick={() => onSectionChange(3)}
             />
-          </motion.div>
+            </div>
+          </div>
         </div>
       </CoolMode>
     </>
@@ -72,12 +71,15 @@ export const Menu = (props) => {
 };
 
 const MenuButton = (props) => {
-  const { label, onClick, icon, menuOpened } = props;
+  const { label, onClick, icon } = props;
   
   return (
     <button
       onClick={onClick}
-      className={`text-2xl font-bold cursor-pointer hover:text-indigo-600 transition-colors flex items-center gap-3 
+      className={`w-auto text-center text-lg md:text-lg font-semibold cursor-pointer flex items-center justify-center gap-3
+      rounded-xl px-3 py-2 text-white/95 hover:text-white
+      bg-white/0 hover:bg-white/15 border border-transparent hover:border-white/20
+      transition-all duration-200
        `}
     >
       {icon}
