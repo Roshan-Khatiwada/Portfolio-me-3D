@@ -193,6 +193,28 @@ const Projects = ({ command }) => {
           </div>
          </a>
      </div>
+     <div id='projects_row'>
+          
+          <div id='projects_ui'>
+                  <img src='/projects/mobilecarenepal.png'/>
+          </div>
+           <a href='https://mobilescarenepal.com' target="_blank" rel="noopener noreferrer">
+          <div id='projects_info'>
+                 <div id='project_name'>
+                     Mobile Care Nepal
+                 </div>
+                  <div id='project_details'>
+                    It is a official website of Mobile Care Nepal Pvt. Ltd. Created by me.
+                 </div>
+                  <div id='language_used'>
+                  <FaHtml5 size={25} color='#b3be62'/>
+                  <FaCss3 size={25} color='#75ba75'/>
+                  <FaJs size={25} color='#75ba75'/>
+                  
+                 </div>
+          </div>
+         </a>
+     </div>
         <div id='projects_row'>
           
              <div id='projects_ui'>
