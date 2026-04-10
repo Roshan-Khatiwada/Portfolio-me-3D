@@ -34,11 +34,11 @@ export const Menu = (props) => {
           ${menuOpened ? "pointer-events-auto" : "pointer-events-none"}`}
         >
           <div
-            className={`absolute top-0 right-0 w-screen h-screen
-            md:top-1/2 md:-translate-y-1/2 md:w-[88vw] md:max-w-xs md:h-[60%]
-            bg-slate-900/45 backdrop-blur-md shadow-2xl
-            md:rounded-l-2xl border border-white/20
-            transition-transform duration-300 ease-out overflow-y-auto menu-scrollbar flex flex-col
+              className={`absolute top-0 right-0 w-screen h-screen
+              md:top-1/2 md:-translate-y-1/2 md:w-[88vw] md:max-w-xs md:h-[60%]
+              bg-slate-900/45 backdrop-blur-md shadow-2xl
+              md:rounded-l-2xl border-l border-t border-b border-[#A855F7]
+              transition-transform duration-300 ease-out overflow-y-auto menu-scrollbar flex flex-col
             ${menuOpened ? "translate-x-0 md:mr-2" : "translate-x-full md:mr-0"}`}
           >
             <div className="h-full w-full flex flex-col items-center justify-center gap-3 p-4 md:p-5 text-white">
@@ -76,9 +76,9 @@ const MenuButton = (props) => {
   return (
     <button
       onClick={onClick}
-      className={`w-auto text-center text-lg md:text-lg font-semibold cursor-pointer flex items-center justify-center gap-3
-      rounded-xl px-3 py-2 text-white/95 hover:text-white
-      bg-white/0 hover:bg-white/15 border border-transparent hover:border-white/20
+      className={`w-[130px] text-center text-lg md:text-lg font-bold cursor-pointer flex items-center justify-center gap-3
+      rounded-xl px-3 py-2 text-[#fff] bg-[#A855F7]
+      hover:bg-[#c68ffc] border border-transparent 
       transition-all duration-200
        `}
     >
